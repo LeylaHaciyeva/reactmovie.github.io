@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+* {
+  font-family: 'Helvetica Neue';
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #75c7eb;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-right {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-end;
+}
+
+.link {
   color: white;
+  text-decoration: none;
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.link:hover {
+  color: #75c7eb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.watch-link {
+  margin-right: 10px;
+}
+
+.search-input {
+  width: 100%;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.image {
+  width: 150px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.movie {
+  display: flex;
+  padding: 50px 0;
+}
+
+.desc {
+  margin: auto auto auto 15px;
+}
+
+.desc h1 {
+  font-weight: 700;
+  color: black;
+}
+
+.desc span {
+  color: rgb(90, 90, 90);
+  font-size: 16px;
+}
+
+.desc p {
+  padding: 20px 0;
+  text-align: justify;
+  color: rgb(43, 42, 42);
+}
+
+@media only screen and (max-width: 556px) {
+  .movie {
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+
+  .image {
+    width: 100%;
+    height: 180px;
+  }
+
+  .desc {
+    margin: 10px;
+  }
+
+  .desc h1 {
+    font-size: 20px;
+  }
+
+  .desc p {
+    padding: 10px 0;
+  }
+
+  .desc button {
+    display: block;
+    width: 100%;
   }
 }
